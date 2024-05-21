@@ -9,7 +9,7 @@ class Post(Base):
     title = Column(String)
     content = Column(String)
     author_id = Column(Integer, ForeignKey('users.id'))
-    author = relationship('user', back_populates='posts')
+    author = relationship('User', back_populates='posts')
     
     def __init__(self, title, content, author):
         self.title = title
