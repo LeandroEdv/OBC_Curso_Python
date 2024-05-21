@@ -15,19 +15,19 @@ def show_menu():
 #Função para adcionar Usuário
 def add_user():
     print('Adcionar novo Usuário:')
-    name = input('Nome: ')
-    email = input('e-mail: ')
-    user = User(name=name, email=email)
+    name = input('Nome:\n')
+    email = input('e-mail:\n')
+    user = User(name, email)
     session.add(user)
     session.commit()
-    print('Usuário criado com sucesso!')
+    print('Usuário adicionado com sucesso!')
     
 #Funcção para adcionar um novo post
 def add_post():
     print('Adcionar post:')
-    title = input('Titulo:')
-    content = input('Conteudo:')
-    author_id = input('ID do Autor')
+    title = input('Titulo:\n')
+    content = input('Conteúdo:\n')
+    author_id = input('ID do Autor:\n')
     user = session.query(User).filter_by(id=author_id).first()
     if user:
         post = Post(title=title,content=content,author=user)
