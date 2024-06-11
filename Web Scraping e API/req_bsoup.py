@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import pandas
 
 response = requests.get("https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&searchTextSrc=ft&searchTextText=&txtKeywords=python&txtLocation=")
 print(response.status_code)
