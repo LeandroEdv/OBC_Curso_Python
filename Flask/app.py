@@ -5,7 +5,13 @@ app = Flask(__name__)
 #localhost:5000/
 @app.route('/')
 def principal():
-    return render_template("index.html")
+    conteudos = ['Manipulação de Dados',
+                'Herança e Templates',
+                'Integração de APIs',
+                'Banco de Dados', 'outro'
+    ]
+    
+    return render_template("index.html", conteudos = conteudos)
 
 @app.route('/sobre')
 def sobre():
