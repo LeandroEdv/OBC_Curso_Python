@@ -6,6 +6,13 @@
     <title>Sobre Mim</title>
 </head>
 <body>
-    <h2>Sobre Mim</h2>
+    <h2 style="text-align: center;">notas da turma</h2>
+    <hr>
+    {% for aluno, nota in diario.items() %}
+    <details>
+        <summary>{{aluno}}</summary>
+        <P>{{nota}}</P>
+    </details>
+    {% endfor %}
 </body>
 </html>
