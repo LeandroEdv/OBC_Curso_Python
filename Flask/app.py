@@ -1,4 +1,9 @@
+#
+# INPORTANDO FALSK E DADOS REQUISITADOS 
+#
 from flask import Flask, render_template, request
+from lista_filmes import dados_json
+
 
 app = Flask(__name__)
 conteudos = []
