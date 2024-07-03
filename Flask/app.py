@@ -31,3 +31,9 @@ def diario():
                               'nota': nota})
         
     return render_template('sobre.html', registros = registros)
+
+@app.route('/filmes')
+def lista_fimes():
+    return render_template('filmes.html', filmes = dados_json['results'])
+
+    
