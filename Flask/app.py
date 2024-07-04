@@ -2,7 +2,7 @@
 # INPORTANDO FALSK E DADOS REQUISITADOS 
 #
 from flask import Flask, render_template, request
-from lista_filmes import dados_json
+from lista_filmes import resultado_filmes
 
 
 app = Flask(__name__)
@@ -32,8 +32,8 @@ def diario():
         
     return render_template('sobre.html', registros = registros)
 
-@app.route('/filmes')
-def lista_fimes():
-    return render_template('filmes.html', filmes = dados_json['results'])
+@app.route('/filmes/<propiedade>')
+def lista_fimes(propriedade):
+    return render_template('filmes.html', filmes = resultado_filmes(propriedade))
 
     
