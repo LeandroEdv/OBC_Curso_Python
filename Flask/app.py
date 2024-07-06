@@ -2,9 +2,9 @@
 # INPORTANDO FALSK E DADOS REQUISITADOS 
 #
 from flask import Flask, render_template, request
-from lista_filmes import resultado_filmes
+from projeto.lista_filmes import resultado_filmes
 from flask_sqlalchemy import SQLAlchemy
-
+from projeto.livro import livro
 
 app = Flask(__name__)
 
@@ -43,4 +43,6 @@ def diario():
 def lista_fimes(propriedade):
     return render_template('filmes.html', filmes = resultado_filmes(propriedade))
 
-    
+@app.route('/livros')
+def lista_livros():
+    return render_template("livros.html", Livros = livro.query.all())   

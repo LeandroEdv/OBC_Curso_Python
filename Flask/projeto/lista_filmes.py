@@ -3,6 +3,7 @@ import json
 
 
 def resultado_filmes(tipo):
+    
     if tipo == 'populares':
         url = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3ddc9b92db4de6c6559569c67bd88a13'
     elif tipo == 'animacao':

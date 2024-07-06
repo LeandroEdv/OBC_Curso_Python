@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h2 class="text-center">Lista de livros</h2>
+<hr>
+<br>
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>decricao</th>
+            <th>valor</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        {% for livro in livros %}
+        <tr>
+            <td>{{livro.id}}</td>
+            <td>{{livro.nome}}</td>
+            <td>{{livro.descricao}}</td>
+            <td>{{livro.valor}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+    
+       
+    IdNomeDescriçãoValor{{livro.id}}{{livro.nome}}{{livro.descricao}}{{livro.valor}}
+            
+
+{% endblock conteudo %}
